@@ -1,0 +1,21 @@
+{
+    "name": "Ubuntu Dev Container",
+    "dockerFile": "Dockerfile",
+    "context": ".",
+    "remoteUser": "devuser",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "ms-vscode.remote-containers"
+    ],
+    "postCreateCommand": "sudo apt update && sudo apt upgrade -y",
+    "forwardPorts": [
+        2222
+    ],
+    "remoteEnv": {
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin"
+    }
+}
